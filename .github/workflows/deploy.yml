@@ -10,51 +10,56 @@ jobs:
     permissions:
       contents: write
       pages: write
+      id-token: write
+
     steps:
-      - name: Checkout
+      # 1. 递归检出主仓库及子模块
+      - name: Checkout with submodules
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          fetch-depth: 0  # 获取完整历史记录
 
+      # 2. 强制重置子模块引用
+      - name: Reset submodules
+        run: |
+          git submodule deinit -f themes/next
+          git submodule update --init --force --remote --depth=50 themes/next
+
+      # 3. 设置 Node.js 环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
-      - name: Install Dependencies
+      # 4. 安装依赖（包含关键插件）
+      - name: Install dependencies
         run: |
           npm install -g hexo-cli
-          npm install
+          npm ci
           npm install hexo-deployer-git --save
           npm install hexo-filter-mathjax --save
 
-      - name: Generate Files
+      # 5. 生成静态文件
+      - name: Generate files
         run: |
           hexo clean
           hexo generate
+          
+          # 添加调试信息
+          echo "=== Generated files ==="
           ls -la public/
+          echo "=== Submodule status ==="
+          git submodule status
 
-      - name: Install Brotli
-        run: sudo apt-get install brotli
-
-      - name: Brotli Compress
-        run: |
-          find ./public -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.svg' -o -name '*.txt' \) -exec brotli -Z {} +
-
-      - name: Verify Brotli Files
-        run: |
-          count=$(find ./public -name '*.br' | wc -l)
-          if [ $count -eq 0 ]; then exit 1; fi
-
-      - name: Deploy to GitHub Pages
+      # 6. 部署到 GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PAT_TOKEN }}  # 使用自定义 Token
-          publish_dir: ./public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          force_orphan: true  # 强制清空分支历史
+          publish_dir: ./public
+          force_orphan: true
           keep_files: false
-      
-      - name: Fix Asset Paths
-        run: |
-          sed -i 's/\/ccxx\//\//g' public/**/*.html
+          commit_message: "Deploy: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
