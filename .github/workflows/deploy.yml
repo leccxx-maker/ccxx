@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 完整拉取历史记录
+          submodules: recursive
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,12 +25,14 @@ jobs:
         run: |
           npm install -g hexo-cli
           npm install
+          npm install hexo-deployer-git --save
           npm install hexo-filter-mathjax --save
 
       - name: Generate Files
         run: |
           hexo clean
           hexo generate
+          ls -la public/
 
       - name: Install Brotli
         run: sudo apt-get install brotli
