@@ -1,0 +1,53 @@
+name: Deploy Hexo Site
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 完整拉取历史记录
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: |
+          npm install -g hexo-cli
+          npm install
+
+      - name: Generate Files
+        run: |
+          hexo clean
+          hexo generate
+
+      - name: Install Brotli
+        run: sudo apt-get install brotli
+
+      - name: Brotli Compress
+        run: |
+          find ./public -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.svg' -o -name '*.txt' \) -exec brotli -Z {} +
+
+      - name: Verify Brotli Files
+        run: |
+          count=$(find ./public -name '*.br' | wc -l)
+          if [ $count -eq 0 ]; then exit 1; fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}  # 使用自定义 Token
+          publish_dir: ./public
+          publish_branch: gh-pages
+          force_orphan: true  # 强制清空分支历史
+          keep_files: false
