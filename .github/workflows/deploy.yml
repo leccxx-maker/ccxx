@@ -24,7 +24,7 @@ jobs:
       - name: Reset submodules
         run: |
           git submodule deinit -f themes/next
-          git submodule update --init --force --remote --depth=50 themes/next
+          git submodule update --init --force --remote themes/next
 
       # 3. 设置 Node.js 环境
       - name: Setup Node.js
