@@ -51,3 +51,7 @@ jobs:
           publish_branch: gh-pages
           force_orphan: true  # 强制清空分支历史
           keep_files: false
+      
+      - name: Fix Asset Paths
+        run: |
+          sed -i 's/\/ccxx\//\//g' public/**/*.html
