@@ -25,6 +25,7 @@ jobs:
         run: |
           npm install -g hexo-cli
           npm install
+          npm install hexo-filter-mathjax --save
 
       - name: Generate Files
         run: |
