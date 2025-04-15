@@ -25,7 +25,10 @@ jobs:
         run: |
           git submodule deinit -f themes/next
           git submodule update --init --force --remote themes/next
-          git submodule foreach git pull origin main
+          cd themes/next
+          git fetch origin main
+          git reset --hard origin/main
+          cd -
 
       # 3. 设置 Node.js 环境
       - name: Setup Node.js
