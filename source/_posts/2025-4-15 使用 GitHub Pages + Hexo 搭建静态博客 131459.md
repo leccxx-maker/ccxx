@@ -2,9 +2,8 @@
 title: GitHub Pages + Hexo 搭建静态博客
 date: 2025-04-15 13:14
 tag: 项目
-categories:前端
+categories: 前端
 ---
-
 # 使用 GitHub Pages + Hexo 搭建静态博客
 
 ## 目录
