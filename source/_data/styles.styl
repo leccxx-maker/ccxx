@@ -1,0 +1,68 @@
+/* source/_data/styles.styl */
+// 统一配色方案
+$brand-color = #2d96bd
+$link-color = #2d96bd
+$btn-default-bg = darken($brand-color, 10%)
+
+// 圆角设计
+.post-block, .sidebar {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+// 现代代码块样式
+.highlight {
+  border-radius: 8px;
+  padding: 1.2em;
+  margin: 1em 0;
+}
+
+// 动态按钮效果
+.menu-item a:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+// home icon
+.menu-item-home a::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/home.png) no-repeat;
+  background-size: cover;
+  margin-right: 8px;
+}
+
+/* 自定义 Archives 图标 */
+.menu-item-archives a::before {
+  content: '';
+  display: inline-block;
+  width: 16px;    /* 图标宽度（根据实际调整） */
+  height: 16px;   /* 图标高度（根据实际调整） */
+  background: url(../images/archives.png) no-repeat;
+  background-size: cover;  /* 自适应图标尺寸 */
+  margin-right: 8px;       /* 图标与文字间距 */
+}
+
+/* 自定义 Tags 图标 */
+.menu-item-tags a::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/tags.png) no-repeat;
+  background-size: cover;
+  margin-right: 8px;
+}
+
+/* 自定义 Categories 图标 */
+.menu-item-categories a::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/categories.png) no-repeat;
+  background-size: cover;
+  margin-right: 8px;
+}

@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: Not having dreams that are impossible to achieve
+subtitle: Take what you want to do to the extreme
+description: Record your own growth journey, share high-quality technical documents and insights.
 keywords:
-author: John Doe
+author: leccxx
 language: en
-timezone: ''
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://leccxx-maker.github.io/ccxx/
+url: https://leccxx-maker.github.io/ccxx
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -66,7 +66,7 @@ index_generator:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
+category_map: 
 tag_map:
 
 # Metadata elements
@@ -100,5 +100,12 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+
+# 在文件末尾添加
+prism_plugin:
+  mode: 'preprocess'    # 代码预处理模式
+  theme: 'night-owl'    # 指定主题（需与 NexT 配置一致）
+  line_number: true     # 显示行号
+  custom_css: ''        # 自定义 CSS 路径（可选）
 deploy:
   type: ''

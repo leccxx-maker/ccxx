@@ -40,7 +40,6 @@ jobs:
           npm ci
           npm install hexo-deployer-git --save
           npm install hexo-filter-mathjax --save
-          npm install hexo-prism-plugin --save
 
       # 5. 生成静态文件
       - name: Generate files
@@ -53,12 +52,6 @@ jobs:
           ls -la public/
           echo "=== Submodule status ==="
           git submodule status
-      
-      - name: Optimize Assets
-        run: |
-          # 压缩图片资源
-          find source/images -name '*.jpg' -exec mogrify -strip -quality 85% {} \;
-          find source/images -name '*.png' -exec optipng -o5 {} \;
 
       # 6. 部署到 GitHub Pages
       - name: Deploy
