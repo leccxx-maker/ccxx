@@ -161,11 +161,11 @@ Docker是一个开放源代码的开放平台软件，用于开发应用、交�
    传统应用兼容：某些传统应用可能依赖默认网络行为
    ```
    
-   ![更新hosts文件](F:\简历项目集\k8s第一个项目素材\更新hosts文件.png)
+   ![更新hosts文件](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/更新hosts文件.png)
    
-   ![加载内核模块](F:\简历项目集\k8s第一个项目素材\加载内核模块.png)
+   ![加载内核模块](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/加载内核模块.png)
    
-   ![设置内核参数](F:\简历项目集\k8s第一个项目素材\设置内核参数.png)
+   ![设置内核参数](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/设置内核参数.png)
 
 ### 安装组件
 
@@ -193,9 +193,9 @@ Docker是一个开放源代码的开放平台软件，用于开发应用、交�
    ## 访问网址：https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11DFscKg
    ```
 
-   ![对应版本的源](F:\简历项目集\k8s第一个项目素材\对应版本的源.png)
+   ![对应版本的源](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/对应版本的源.png)
 
-   ![Ubuntu阿里云源](F:\简历项目集\k8s第一个项目素材\Ubuntu阿里云源.png)
+   ![Ubuntu阿里云源](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/Ubuntu阿里云源.png)
 
 2. #### 安装Docker
 
@@ -247,7 +247,7 @@ Docker是一个开放源代码的开放平台软件，用于开发应用、交�
    ## 访问地址：https://developer.aliyun.com/mirror/docker-ce?spm=a2c6h.13651102.0.0.49571b11HWsabl
    ```
 
-   ![阿里云docker-ce源](F:\简历项目集\k8s第一个项目素材\docker-ce.png)
+   ![阿里云docker-ce源](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/docker-ce.png)
 
 3. #### 安装kubeadm, kubelet, kubectl
 
@@ -290,7 +290,7 @@ Docker是一个开放源代码的开放平台软件，用于开发应用、交�
    
    ```
 
-   ![kubernetes国内源](F:\简历项目集\k8s第一个项目素材\kubernetes国内源.png)
+   ![kubernetes国内源](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/kubernetes国内源.png)
 
 ### 集群初始化
 

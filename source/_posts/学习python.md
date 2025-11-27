@@ -1,6 +1,6 @@
 ---
 title: 学习Python
-date: 2024-11-20
+date: 2025-11-20
 tag: 练习
 categories: Python
 ---

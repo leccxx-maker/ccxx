@@ -49,7 +49,7 @@ categories: Linux
    "
    ```
 
-   ![image-20251122081110019](C:\Users\ccxx\AppData\Roaming\Typora\typora-user-images\image-20251122081110019.png)
+   ![用户和权限管理](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/用户和权限管理.png)
 
 2. ### 软件包管理
 
@@ -66,7 +66,7 @@ categories: Linux
    systemctl status nginx
    ```
 
-   ![image-20251122082511577](C:\Users\ccxx\AppData\Roaming\Typora\typora-user-images\image-20251122082511577.png)
+   ![软件包管理](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/软件包管理.png)
 
 3. ### 进程和系统监控
 
