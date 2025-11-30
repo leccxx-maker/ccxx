@@ -3,13 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Not having dreams that are impossible to achieve
+title: leccxx-blogs
 subtitle: Take what you want to do to the extreme
-description: Record your own growth journey, share high-quality technical documents and insights.
+description: Not having dreams that are impossible to achieve.
 keywords:
 author: leccxx
 language: en
 timezone: Asia/Shanghai
+email: 25225ccxx@gmail.com
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -98,14 +99,4 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
 
-# 在文件末尾添加
-prism_plugin:
-  mode: 'preprocess'    # 代码预处理模式
-  theme: 'night-owl'    # 指定主题（需与 NexT 配置一致）
-  line_number: true     # 显示行号
-  custom_css: ''        # 自定义 CSS 路径（可选）
-deploy:
-  type: ''

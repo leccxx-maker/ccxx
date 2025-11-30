@@ -49,7 +49,7 @@ categories: Linux
    "
    ```
 
-   ![用户和权限管理](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/用户和权限管理.png)
+   ![用户和权限管理](https://myblog-ccxx.oss-cn-hangzhou.aliyuncs.com/doc_k8s_2025-11-20_images/%E7%94%A8%E6%88%B7%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86.png)
 
 2. ### 软件包管理
 
@@ -66,7 +66,7 @@ categories: Linux
    systemctl status nginx
    ```
 
-   ![软件包管理](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/软件包管理.png)
+   ![软件包管理](https://myblog-ccxx.oss-cn-hangzhou.aliyuncs.com/doc_k8s_2025-11-20_images/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86.png)
 
 3. ### 进程和系统监控
 

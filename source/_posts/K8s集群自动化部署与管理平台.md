@@ -161,11 +161,11 @@ Docker是一个开放源代码的开放平台软件，用于开发应用、交�
    传统应用兼容：某些传统应用可能依赖默认网络行为
    ```
    
-   ![更新hosts文件](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/更新hosts文件.png)
+   ![更新hosts文件](https://myblog-ccxx.oss-cn-hangzhou.aliyuncs.com/doc_k8s_2025-11-20_images/%E6%9B%B4%E6%96%B0hosts%E6%96%87%E4%BB%B6.png)
    
-   ![加载内核模块](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/加载内核模块.png)
+   ![加载内核模块](https://myblog-ccxx.oss-cn-hangzhou.aliyuncs.com/doc_k8s_2025-11-20_images/%E5%8A%A0%E8%BD%BD%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97.png)
    
-   ![设置内核参数](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/设置内核参数.png)
+   ![设置内核参数](https://myblog-ccxx.oss-cn-hangzhou.aliyuncs.com/doc_k8s_2025-11-20_images/%E8%AE%BE%E7%BD%AE%E5%86%85%E6%A0%B8%E5%8F%82%E6%95%B0.png)
 
 ### 安装组件
 
@@ -193,9 +193,9 @@ Docker是一个开放源代码的开放平台软件，用于开发应用、交�
    ## 访问网址：https://developer.aliyun.com/mirror/ubuntu?spm=a2c6h.13651102.0.0.3e221b11DFscKg
    ```
 
-   ![对应版本的源](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/对应版本的源.png)
+   ![对应版本的源](https://myblog-ccxx.oss-cn-hangzhou.aliyuncs.com/doc_k8s_2025-11-20_images/%E5%AF%B9%E5%BA%94%E7%89%88%E6%9C%AC%E7%9A%84%E6%BA%90.png)
 
-   ![Ubuntu阿里云源](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/Ubuntu阿里云源.png)
+   ![Ubuntu阿里云源](https://myblog-ccxx.oss-cn-hangzhou.aliyuncs.com/doc_k8s_2025-11-20_images/Ubuntu%E9%98%BF%E9%87%8C%E4%BA%91%E6%BA%90.png)
 
 2. #### 安装Docker
 
@@ -247,7 +247,7 @@ Docker是一个开放源代码的开放平台软件，用于开发应用、交�
    ## 访问地址：https://developer.aliyun.com/mirror/docker-ce?spm=a2c6h.13651102.0.0.49571b11HWsabl
    ```
 
-   ![阿里云docker-ce源](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/docker-ce.png)
+   ![阿里云docker-ce源](https://myblog-ccxx.oss-cn-hangzhou.aliyuncs.com/doc_k8s_2025-11-20_images/docker-ce.png)
 
 3. #### 安装kubeadm, kubelet, kubectl
 
@@ -290,7 +290,7 @@ Docker是一个开放源代码的开放平台软件，用于开发应用、交�
    
    ```
 
-   ![kubernetes国内源](https://cdn.jsdelivr.net/gh/leccxx/ccxx/source/images/kubernetes国内源.png)
+   ![kubernetes国内源](https://myblog-ccxx.oss-cn-hangzhou.aliyuncs.com/doc_k8s_2025-11-20_images/kubernetes%E5%9B%BD%E5%86%85%E6%BA%90.png)
 
 ### 集群初始化
 
