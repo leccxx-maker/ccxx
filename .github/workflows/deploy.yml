@@ -13,31 +13,20 @@ jobs:
       id-token: write
 
     steps:
-      # 1. 递归检出主仓库及子模块
-      - name: Checkout with submodules
+      # 1. 检出仓库（不再使用 submodules）
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
-          fetch-depth: 0  # 获取完整历史记录
+          fetch-depth: 0
 
-      # 2. 强制重置子模块引用
-      - name: Reset submodules
-        run: |
-          git submodule deinit -f themes/next
-          git submodule update --init --force --remote themes/next
-          cd themes/next
-          git fetch origin master
-          git reset --hard origin/master
-          cd -
-
-      # 3. 设置 Node.js 环境
+      # 2. 设置 Node 环境
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
 
-      # 4. 安装依赖（包含关键插件）
+      # 3. 安装 Hexo 及依赖
       - name: Install dependencies
         run: |
           npm install -g hexo-cli
@@ -49,25 +38,15 @@ jobs:
           npm install hexo-generator-baidu-sitemap --save
           npm install hexo-all-minifier --save
 
-      # 5. 生成静态文件
+      # 4. 生成静态文件
       - name: Generate files
         run: |
           hexo clean
           hexo generate
-          
-          # 添加调试信息
-          echo "=== Generated files ==="
+          echo "=== After Generate ==="
           ls -la public/
-          echo "=== Submodule status ==="
-          git submodule status
-      
-      - name: Optimize Assets
-        run: |
-          # 压缩图片资源
-          find source/images -name '*.jpg' -exec mogrify -strip -quality 85% {} \;
-          find source/images -name '*.png' -exec optipng -o5 {} \;
-         
-      # 6. 部署到 GitHub Pages
+
+      # 5. 部署到 GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -76,4 +55,3 @@ jobs:
           publish_dir: ./public
           force_orphan: true
           keep_files: false
-          commit_message: "Deploy: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
